@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title Marker
+    meta(charset="UTF-8")
+    meta(name="Description" content="Markdown Notepad")
+    meta(name="theme-color" content="#fffff0")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    // scripts
+    script(src='bundle.js')
+    script(src='pwa.js')
+    script(src='index.js')
+    script(src='rainbow-custom.min.js')
+    // css
+    link(rel='stylesheet' href='index.css')
+    link(rel='stylesheet' href='github.css')
+    // icons
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png")
+    link(rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png")
+    // pwa
+    link(rel="manifest", href="manifest.webmanifest")
+  body
+    div.flex
+      textarea
+      #results

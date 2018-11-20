@@ -1,18 +1,18 @@
 {
-  "name": "Guppy",
-  "short_name": "Guppy",
-  "start_url": "/guppy/",
+  "name": "Marker",
+  "short_name": "Marker",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "orange",
-  "description": "Markdown",
+  "background_color": "#fff",
+  "description": "Markdown renderer",
   "icons": [
     {
-      "src": "images/icon-192.png",
+      "src": "icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/icon-512.png",
+      "src": "icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

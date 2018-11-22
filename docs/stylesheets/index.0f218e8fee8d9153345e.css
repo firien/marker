@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-y: hidden; }
+
+.flex {
+  display: flex; }
+
+.flex > * {
+  margin: 0;
+  flex: 1 50%;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
+  font-size: 1em;
+  overflow-y: auto; }
+
+textarea {
+  resize: none;
+  border: none;
+  background-color: #f8f7f5; }
+
+textarea:focus {
+  outline: none; }
+
+h1, h2 {
+  border-bottom: thin solid #ddd;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  font-weight: 600; }
+
+p {
+  line-height: 1.3; }
+
+p code {
+  padding: 0.1em 0.3em;
+  margin: 0;
+  background-color: rgba(27, 31, 35, 0.05);
+  background-color: #eee;
+  border-radius: 0.2em;
+  font-family: 'Menlo', monospaced; }
+
+a {
+  color: #1414c8;
+  text-decoration: none; }
+
+hr {
+  border-top: thin solid black;
+  border-bottom: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+table {
+  border-collapse: collapse; }
+
+table th, table td {
+  border: thin solid #555;
+  padding: 0.4em; }
+
+table th {
+  border-bottom: medium solid #555; }
+
+table tr:nth-of-type(even) {
+  background-color: #eee; }
+
+blockquote {
+  margin: 0;
+  border-left: medium solid #888;
+  padding-left: 0.5em; }
+
+@media print {
+  body {
+    font-size: 0.75em; }
+  textarea {
+    display: none; }
+  a:hover {
+    text-decoration: none; }
+  #results {
+    overflow-y: visible; } }
+
+button#installer {
+  background: url(touch-icon-ipad.png) left no-repeat;
+  font-family: -apple-system;
+  position: absolute;
+  background-color: navy;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  border: thin solid white;
+  border-radius: 0.2em;
+  color: #fffff0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  height: 2em;
+  background-size: 2em 2em;
+  padding-left: 2.5em;
+  padding-right: 0.5em;
+  cursor: pointer; }

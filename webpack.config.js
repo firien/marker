@@ -1,5 +1,13 @@
 const path = require('path');
+const PWAPlugin = require('pwa')
 
+app = new PWAPlugin({
+  name: 'Marker',
+  scope: 'marker',
+  description: "Markdown Notepad",
+  theme: '#fffff0',
+  tag: 2
+})
 module.exports = [
   {
     name: 'client',
@@ -7,8 +15,13 @@ module.exports = [
     // target: 'web', // by default
     output: {
       path: path.resolve(__dirname, 'docs'),
-      filename: 'bundle.js',
+      filename: 'bundle.[contenthash].js',
     },
-    mode: 'production'
+    mode: 'development',
+    devServer: {
+      contentBase: path.join(__dirname, 'docs'),
+      port: 3012
+    },
+    plugins: [app]
   }
 ];

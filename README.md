@@ -1,5 +1,4 @@
 # marker
 Markdown Render
 
-> npx cake serve
-
+> npx webpack-dev-server

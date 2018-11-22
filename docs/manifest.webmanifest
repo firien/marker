@@ -1,20 +1,35 @@
 {
-  "name": "Marker",
-  "short_name": "Marker",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "Markdown renderer",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ]
+    "name": "Marker",
+    "short_name": "Marker",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fffff0",
+    "description": "Markdown Notepad",
+    "icons": [
+        {
+            "src": "images/icon-152.754897053343ea1ae84c.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "images/icon-167.e21117c1e97fb6727a8c.png",
+            "type": "image/png",
+            "sizes": "167x167"
+        },
+        {
+            "src": "images/icon-180.4685c1b46790d3de3429.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "images/icon-192.4874a54cb614454e8f0d.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/icon-512.c6c022ce6a47bc7c09b0.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
 }

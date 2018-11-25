@@ -1,13 +1,23 @@
 const path = require('path');
-const PWAPlugin = require('pwa');
+const PWAPlugin = require('gh-pwa');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// https://github.com/webpack/webpack/issues/6496
+const mode = () => {
+  if (process.env.NODE_ENV != null) {
+    return process.env.NODE_ENV;
+  } else {
+    return 'development';
+  }
+}
 
 const app = new PWAPlugin({
   name: 'Marker',
   scope: 'marker',
   description: "Markdown Notepad",
   theme: '#fffff0',
-  tag: 4
+  tag: 4,
+  mode: mode()
 })
 
 module.exports = [
@@ -19,8 +29,8 @@ module.exports = [
       path: path.resolve(__dirname, 'docs'),
       filename: 'bundle.[contenthash].js',
     },
-    watch: true,
-    mode: 'development',
+    // watch: true,
+    mode: mode(),
     devServer: {
       contentBase: path.join(__dirname, 'docs'),
       port: 3012

@@ -1,7 +1,7 @@
 (function() {
   var $cacheName, $prefix, $urls, clearPreviousCaches, tag;
 
-  tag = '2';
+  tag = '3';
 
   $prefix = 'MARKER';
 

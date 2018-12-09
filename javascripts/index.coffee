@@ -1,34 +1,47 @@
 marked.setOptions(sanitize: true, gfm: true, breaks: true)
+
 renderMarkdown = (e) ->
   result = document.querySelector('#results')
   domString = marked(this.value)
   try
-    window.localStorage.setItem('low-lite', this.value)
+    window.localStorage.setItem('marker', this.value)
   catch error
     42
   dom = document.implementation.createHTMLDocument('markdown')
   dom.open()
   dom.write(domString)
   dom.close()
-  window.requestAnimationFrame( ->
-    while (result.firstChild)
-      result.removeChild(result.firstChild)
-    Array.prototype.slice.call(dom.body.childNodes).forEach((el) ->
-      result.appendChild(document.importNode(el, true))
-    )
-    # syntax highlight
-    codeBlocks = Array.prototype.slice.call(document.querySelectorAll('pre code[class^=language]'))
-    codeBlocks.forEach((cb) ->
+  #import to temp dif
+  tempDiv = document.createElement('div')
+  tempDiv.setAttribute('id', 'results')
+  Array.prototype.slice.call(dom.body.childNodes).forEach((el) ->
+    tempDiv.appendChild(document.importNode(el, true))
+  )
+  dom = null
+  # syntax highlight
+  codeBlocks = Array.prototype.slice.call(tempDiv.querySelectorAll('pre code[class^=language]'))
+  promises = codeBlocks.map((cb) ->
+    new Promise((resolve, reject) ->
       lang = cb.className.replace('language-', '')
       cb.dataset.language = lang
-      Rainbow.color(cb.parentNode)
+      Rainbow.color(cb.parentNode, resolve)
+    )
+  )
+  Promise.all(promises).then( ->
+    # diff
+    dd = new diffDOM()
+    diff = dd.diff(result, tempDiv)
+    window.requestAnimationFrame( ->
+      dd.apply(result, diff)
+      tempDiv = null
     )
   )
 
 document.addEventListener('DOMContentLoaded', ->
+  Rainbow.defer = true
   textarea = document.querySelector('textarea')
   try
-    textarea.value = window.localStorage.getItem('low-lite')
+    textarea.value = window.localStorage.getItem('marker')
     renderMarkdown.call(textarea)
   catch error
     42

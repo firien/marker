@@ -6,16 +6,16 @@
     "gh-pwa": "github:firien/gh-pwa",
     "marked": "^0.5.1",
     "pug": "^2.0.3",
-    "webpack": "^4.26.1"
+    "webpack": "^4.28.4"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",
     "coffee-loader": "^0.9.0",
     "css-loader": "^1.0.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }

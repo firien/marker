@@ -1,20 +1,13 @@
 {
   "private": true,
   "dependencies": {
-    "coffeescript": "^2.3.2",
-    "diff-dom": "^2.5.0",
+    "diff-dom": "^2.5.1",
     "gh-pwa": "github:firien/gh-pwa",
     "marked": "^0.5.1",
-    "pug": "^2.0.3",
-    "webpack": "^4.28.4"
+    "webpack": "^4.29.0"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^1.0.0",
-    "coffee-loader": "^0.9.0",
-    "css-loader": "^1.0.1",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
+    "clean-webpack-plugin": "^1.0.1",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   }

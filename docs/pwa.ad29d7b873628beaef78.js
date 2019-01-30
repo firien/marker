@@ -1,7 +1,7 @@
 (function() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/marker/service.js', {
-      scope: '/marker/'
+    navigator.serviceWorker.register('/service.js', {
+      scope: '/'
     }).then(function(registration) {
       var refreshPage;
       refreshPage = function(worker) {

@@ -5,6 +5,10 @@ Markdown rendering provided by [marked](https://github.com/markedjs/marked) and 
 
 Uses [gh-pwa](https://github.com/firien/gh-pwa) to build docs/ folder.
 
+## Printing/Export
+
+Only the Markdown section is printed. If you need a PDF, 
+
 ---
 
 ### Development

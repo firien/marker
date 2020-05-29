@@ -16,7 +16,7 @@ const app = new PWAPlugin({
   scope: 'marker',
   description: "Markdown Notepad",
   theme_color: '#fffff0',
-  tag: 8,
+  tag: 9,
   mode: mode()
 })
 

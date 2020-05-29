@@ -1,5 +1,5 @@
-import marked from 'marked'
-import diffDOM from 'diff-dom'
+import marked from 'marked';
+import { DiffDOM } from 'diff-dom';
 
-window.marked = marked
-window.diffDOM = diffDOM
+window.marked = marked;
+window.diffDOM = DiffDOM;

@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service.js', {scope: '/'}).then((registration) => {
+  navigator.serviceWorker.register('/marker/service.js', {scope: '/marker/'}).then((registration) => {
     const refreshPage = (worker) => {
       if (worker.state != 'activated') {
         worker.postMessage({action: 'skipWaiting'});

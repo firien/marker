@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.1",
-    "diff-dom": "^4.1.6",
+    "diff-dom": "^4.2.8",
     "gh-pwa": "github:firien/gh-pwa",
     "marked": ">=0.6.1",
     "webpack": "^4.43.0",
